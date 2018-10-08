@@ -41,8 +41,7 @@ public static void main(String[] args) {
 			num3 = (int) (Math.random() * 100) + 2; // 2 a 101
 			num1 = num1 + num3;
 			
-			for (int j=0; j < aAscii; j++ ) {
-				if (num1 >= 1) {
+			while (num1 > 0) {
 				num2 = num1 % 2;
 				
 				num1 = num1 / 2;
@@ -51,7 +50,6 @@ public static void main(String[] args) {
 					aRray = aRray + 1 ;
 				else
 					aRray = aRray + 0 ;
-				}
 			}
 			StringBuilder builder=new StringBuilder(aRray);
 			String aRrayInvertida=builder.reverse().toString();
@@ -60,6 +58,7 @@ public static void main(String[] args) {
 			aRrayInvertida = aRrayInvertida + ";";
 			salida.add(aRrayInvertida);
 			aRray = "";
+			
 		}		
 		for (int i=0; i < salida.size(); i++ ) {
 			
