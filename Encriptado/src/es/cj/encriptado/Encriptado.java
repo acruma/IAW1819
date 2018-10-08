@@ -54,9 +54,21 @@ public static void main(String[] args) {
 			StringBuilder builder=new StringBuilder(aRray);
 			String aRrayInvertida=builder.reverse().toString();
 			
-			aRrayInvertida = aRrayInvertida + num3;
+			aRray = "";
+			while (num3 > 0) {
+				num2 = num3 % 2;
+				
+				num3 = num3 / 2;
+				
+				aRray = aRray + num2 ;
+			}
+			
+			StringBuilder builder2=new StringBuilder(aRray);
+			String aRrayInvertida2=builder2.reverse().toString();
+			aRrayInvertida = aRrayInvertida + "," + aRrayInvertida2;
 			aRrayInvertida = aRrayInvertida + ";";
 			salida.add(aRrayInvertida);
+			
 			aRray = "";
 			
 		}		
@@ -67,6 +79,9 @@ public static void main(String[] args) {
 		}
 		
 	
+		
+		
+		
 		// Condicional para desencriptar
 	}else if (encrip.equalsIgnoreCase("desencriptar")) {
 		// Entrada por teclado de la clave a desencriptar
