@@ -10,13 +10,16 @@ public static void main(String[] args) {
 	// Entrada por teclado de seleccion
 	System.out.println("Elija 'encriptar' o 'desencriptar'");
 	// String encrip = sc.next();
-	String encrip = "encriptar"; // provisional ( para no introducir encriptar )
+	String encrip = "desencriptar"; // provisional ( para no introducir encriptar )
 	
 	// Inicializacion de variables a usar
 	// ArrayList
 	
 	ArrayList<String> salida = new ArrayList<String>();
 	ArrayList<String> salida2 = new ArrayList<String>();
+	
+	ArrayList<String> recogidaDatos = new ArrayList<String>();
+	ArrayList<String> datosCompletos = new ArrayList<String>();
 	// Operadores
 	
 	char aValue;
@@ -25,6 +28,8 @@ public static void main(String[] args) {
 	int num1;
 	int num2;
 	int num3;
+	boolean menu; // Agregar un While ( para el menu "ELIJA" )
+	
 	
 	// Condicional para encriptar
 	if (encrip.equalsIgnoreCase("encriptar")) {
@@ -40,7 +45,7 @@ public static void main(String[] args) {
 			num1 = aAscii;
 			num3 = (int) (Math.random() * 100) + 2; // 2 a 101
 			num1 = num1 + num3;
-			
+			// Caracter a Binario e inversion del binario
 			while (num1 > 0) {
 				num2 = num1 % 2;
 				
@@ -55,6 +60,7 @@ public static void main(String[] args) {
 			String aRrayInvertida=builder.reverse().toString();
 			
 			aRray = "";
+			// Numero aleatorio a binario
 			while (num3 > 0) {
 				num2 = num3 % 2;
 				
@@ -65,8 +71,8 @@ public static void main(String[] args) {
 			
 			StringBuilder builder2=new StringBuilder(aRray);
 			String aRrayInvertida2=builder2.reverse().toString();
-			aRrayInvertida = aRrayInvertida + "," + aRrayInvertida2;
-			aRrayInvertida = aRrayInvertida + ";";
+			// Concatenacion en string
+			aRrayInvertida = aRrayInvertida + "," + aRrayInvertida2 + ";";
 			salida.add(aRrayInvertida);
 			
 			aRray = "";
@@ -80,17 +86,32 @@ public static void main(String[] args) {
 		
 	
 		
-		
+		// Por COMPLETAR \/
 		
 		// Condicional para desencriptar
 	}else if (encrip.equalsIgnoreCase("desencriptar")) {
 		// Entrada por teclado de la clave a desencriptar
 				System.out.println("Introduzca la clave a desencriptar");
 				String clave = sc.next();
-		
-		
+				
+				// Recogemos los datos de Clave y los separamos por cada ; ( forma de cifrado )
+				String[] arrSplit = clave.split(";");
+				for (int i=0; i < arrSplit.length; i++)
+			    {
+					recogidaDatos.add(arrSplit[i]);
+			    }
+				
+				// Ahora como divido por , cada elemento
+				for (int i=0; i < recogidaDatos.size(); i++)
+			    {
+					
+			    }
+				
+				System.out.println(datosCompletos);
 	}
 	
+	
+		
 	
 	
 }
