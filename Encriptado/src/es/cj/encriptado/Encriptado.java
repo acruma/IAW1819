@@ -1,4 +1,4 @@
-package es.cj.encriptado;
+ package es.cj.encriptado;
 
 import java.util.ArrayList;
 import java.util.Scanner;
