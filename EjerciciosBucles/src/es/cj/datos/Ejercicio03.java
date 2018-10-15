@@ -13,17 +13,19 @@ public class Ejercicio03 {
 		
 		System.out.println("Nº: ");
 		int numero = sc.nextInt();
-		int contador = 1;
+		int contadorImpar = 0;
 		int producto = 1;
+		int contador = 0;
 		
 		do {
 			contador++;
-			for (int i = 2; i < contador; i++) {
 			
-				
-				
-			}			
-		} while (contador == numero);
+			if (contador%2 != 0) {
+				contadorImpar++;
+				producto = producto * contador;
+			}
+						
+		} while (contadorImpar < numero);
 		
 		System.out.println(producto);
 		
