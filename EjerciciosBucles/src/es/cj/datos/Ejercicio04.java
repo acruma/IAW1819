@@ -16,7 +16,7 @@ public class Ejercicio04 {
 		int numero = sc.nextInt();
 		int contador = 0;
 		
-		for (int i = numero; i < (numero + 100); i++) {
+		for (int i = (numero+1); i < (numero + 101); i++) {
 			contador += i;
 		}
 		
