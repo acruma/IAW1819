@@ -2,7 +2,7 @@ package es.cj.datos;
 
 import java.util.Scanner;
 
-public class Explicacion {
+public class EjemplosBucles {
 
 	private static Scanner sc = new Scanner(System.in);
 	
@@ -36,3 +36,4 @@ public class Explicacion {
 	}
 
 }
+
