@@ -29,6 +29,8 @@ public class Ejercicio11 {
 				suma = suma + contador;
 			}
 		}
+		
 		System.out.println(suma);
+	
 	}
 }
