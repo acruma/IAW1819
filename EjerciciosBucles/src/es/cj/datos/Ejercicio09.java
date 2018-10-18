@@ -81,10 +81,8 @@ public class Ejercicio09 {
 				if(numero2 != null) {
 					if (numero1 > numero2) {
 						creciente = true;
-						decreciente = false;
 					}else if(numero1 < numero2) {
 						decreciente = true;
-						creciente = false;
 					}
 					
 				}
@@ -92,11 +90,11 @@ public class Ejercicio09 {
 			}
 		}while (salida);
 	
-		if(!creciente || !decreciente) {
+		if(creciente && decreciente) {
 			System.out.println("No ordenados");
-		}else if(decreciente) {
+		}else if(decreciente && !creciente) {
 			System.out.println("Decreciente");
-		}else if(creciente) {
+		}else if(creciente && !decreciente) {
 			System.out.println("Creciente");
 		}
 		
