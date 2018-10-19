@@ -13,6 +13,7 @@ public class Ejercicio07 {
 		System.out.println("Nº: ");
 		int numero = sc.nextInt();
 		int contador;
+		int contadorDePrimos = 0;
 		
 		for (int i = 2; i < numero; i++) {
 			contador = 0;
@@ -22,8 +23,11 @@ public class Ejercicio07 {
 				}
 			}
 			if (contador == 2) {
+				contadorDePrimos++;
 				System.out.println(i);
 			}
 		}
+		
+		System.out.println("Hay " + contadorDePrimos + " numeros primos");
 	}
 }

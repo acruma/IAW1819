@@ -41,6 +41,7 @@ public class Ejercicio09 {
 					
 				}
 				numero2 = numero1;
+				
 			}
 		}while (salida);
 	
