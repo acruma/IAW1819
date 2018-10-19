@@ -2,7 +2,7 @@ package es.cj.semanales.datos;
 
 import java.util.Scanner;
 
-public class EjercicioDos {
+public class Ejercicio02 {
 
 	// (09/10/18) Un obrero necesita calcular su salario semanal, el cual se obtiene de la siguiente manera: 
 	// Si trabaja 40 horas o menos se le paga 16€ por hora 

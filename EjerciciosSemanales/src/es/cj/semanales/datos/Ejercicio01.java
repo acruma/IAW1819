@@ -2,7 +2,7 @@ package es.cj.semanales.datos;
 
 import java.util.Scanner;
 
-public class EjercicioUno {
+public class Ejercicio01 {
 
 	// (09/10/18) Se solicita leer un número entero positivo y determinar si es un número de 1,2,3 o 4 cifras.
 	
