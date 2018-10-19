@@ -37,5 +37,5 @@ public class Ejercicio03ConMetodo {
 		}
 		return suma;
 	}
-	}
+}
 
