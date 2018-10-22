@@ -10,29 +10,35 @@ public class Ejercicio03 {
 	
 	public static void main(String[] args) {
 		
-		System.out.print("Cantidad de Nº : ");
-		int cantidad = sc.nextInt();
-		int numeros [] = new int [cantidad];
-		int pares = 0;
-		int impares = 0;
-		
-		
-		for (int i = 0; i < numeros.length; i++) {
-			numeros[i] = sc.nextInt();
-		}
-		
-		for (int i = 0; i < numeros.length; i++) {
-			if(numeros[i] % 2 == 0) {
-				pares +=1;
-			}else if(numeros[i] % 2 == 1) {
-				impares +=1;
-			}
-		}
-		
-		int tablaPares [] = new int [pares];
-		int tablaImpares [] = new int [impares];
-
-		
+//		System.out.print("Cantidad de Nº : ");
+//		int cantidad = sc.nextInt();
+//		int numeros [] = new int [cantidad];
+//		int pares = 0;
+//		int impares = 0;
+//		
+//		
+//		for (int i = 0; i < numeros.length; i++) {
+//			numeros[i] = sc.nextInt();
+//		}
+//		
+//		for (int i = 0; i < numeros.length; i++) {
+//			if(numeros[i] % 2 == 0) {
+//				pares +=1;
+//			}else if(numeros[i] % 2 == 1) {
+//				impares +=1;
+//			}
+//		}
+//		
+//		int tablaPares [] = new int [pares];
+//		int tablaImpares [] = new int [impares];
+//
+//		for (int i = 0; i < numeros.length; i++) {
+//			if(numeros[i] % 2 == 0) {
+//				pares +=1;
+//			}else if(numeros[i] % 2 == 1) {
+//				impares +=1;
+//			}
+//		}
 		
 	}
 
