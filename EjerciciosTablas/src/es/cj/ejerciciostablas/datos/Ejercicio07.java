@@ -1,5 +1,6 @@
 package es.cj.ejerciciostablas.datos;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -17,7 +18,10 @@ public class Ejercicio07 {
 	
 	public static void main(String[] args) {
 	
-		int numeros [][] = new int [10][3];
+		int numeros [][] = new int [3][10];
+		int trimestreUno [] = new int [10];
+		int trimestreDos [] = new int [10];
+		int trimestreTres [] = new int [10];
 		
 		for (int i = 0; i < numeros.length; i++) {
 			for (int j = 0; j < numeros[i].length; j++) {
@@ -27,11 +31,67 @@ public class Ejercicio07 {
 		
 		for (int i = 0; i < numeros.length; i++) {
 			for (int j = 0; j < numeros[i].length; j++) {
-				System.out.print(numeros[i][j] + " ");
+				if(i == 0) {
+					trimestreUno[j] = numeros[i][j];
+				}else if(i==1) {
+					trimestreDos[j] = numeros[i][j];
+				}else if(i==2) {
+					trimestreTres[j] = numeros[i][j];
+				}
 			}
-			System.out.println();
 		}
+		System.out.println("Se pide leer las notas del primer, segundo y tercer trimestre almacenándolas en una tabla.");
+		System.out.println();
+		System.out.print("Primer Trimestre  : " + Arrays.toString(trimestreUno));
+		System.out.println();
+		System.out.print("Segundo Trimestre : " + Arrays.toString(trimestreDos));
+		System.out.println();
+		System.out.print("Tercer Trimestre  : " + Arrays.toString(trimestreTres));
+		System.out.println();
+		
+		System.out.println();
+		System.out.println("Debemos mostrar la nota media final de cada alumno");
+		System.out.println();
+		double sumaTUno = 0;
+		double sumaTDos = 0;
+		double sumaTTres = 0;
+		for (int i = 0; i < trimestreUno.length; i++) {
+			System.out.println("Nota media del alumno " + (i+1) + " nota : " + (double)(trimestreUno[i]+trimestreDos[i]+trimestreTres[i])/3);
+			sumaTUno += trimestreUno[i];
+			sumaTDos += trimestreDos[i];
+			sumaTTres += trimestreTres[i];
+		}
+		System.out.println();
+		System.out.println("Debemos mostrar la nota media final de cada clase en cada trimestre");
+		System.out.println();
+		
+		System.out.println("Nota media del Primer Trimestre  : " + (sumaTUno/10));
+		System.out.println("Nota media del Segundo Trimestre : " + (sumaTDos/10));
+		System.out.println("Nota media del Tercer Trimestre  : " + (sumaTTres/10));
+		
+		System.out.println("Pida la nota del Alumno : ");
+		int alumno = sc.nextInt();
+		
+		double mediaFinalAlumno = media(alumno, trimestreUno, trimestreDos, trimestreTres);
+		
+		System.out.println(mediaFinalAlumno);
 		
 	}
+
+	private static double media(int alumno, int[] trimestreUno, int[] trimestreDos, int[] trimestreTres) {
+		double media = 0;
+		int suma = 0;
+		
+		for (int i = 0; i < trimestreUno.length; i++) {
+			if(i == (alumno-1))
+			suma = trimestreUno[i]+trimestreDos[i]+trimestreTres[i];
+		}
+		
+		media = (double)suma/3;
+		
+		return media;
+	}
+
+	
 
 }
