@@ -69,12 +69,15 @@ public class Ejercicio07 {
 		System.out.println("Nota media del Segundo Trimestre : " + (sumaTDos/10));
 		System.out.println("Nota media del Tercer Trimestre  : " + (sumaTTres/10));
 		
-		System.out.println("Pida la nota del Alumno : ");
+		System.out.println("Pida la nota del Alumno (entre 1 y 10): ");
 		int alumno = sc.nextInt();
-		
-		double mediaFinalAlumno = media(alumno, trimestreUno, trimestreDos, trimestreTres);
-		
+		double mediaFinalAlumno = 0;
+		if(alumno>=1 && alumno<=10) {
+		mediaFinalAlumno = media(alumno, trimestreUno, trimestreDos, trimestreTres);
 		System.out.println(mediaFinalAlumno);
+		}else
+			System.out.println("Alumno incorrecto");
+		
 		
 	}
 
