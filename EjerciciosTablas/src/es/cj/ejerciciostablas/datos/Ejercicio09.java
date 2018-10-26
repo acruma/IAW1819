@@ -10,7 +10,7 @@ public class Ejercicio09 {
 	// Ordena las tablas. Fusiona las 2 tablas en una tabla de 2*n elementos de 
 	// forma que esta tabla esté ordenada.
 	
-	// Las uno y entonces le hago sort ( no es lo que pide ) Sin comentarios :-D 
+	// Las uno y entonces le hago sort ( no es lo que pide ) Quitar comentarios para verlo. :-D 
 	
 	private static Scanner sc = new Scanner(System.in);
 	private static int numeros [];
@@ -38,7 +38,7 @@ public class Ejercicio09 {
 	}
 
 	private static void fusion() {
-		
+		// Hay que comparar por cada tabla que numero es mayor o igual para agregarla.
 		
 	}
 	
