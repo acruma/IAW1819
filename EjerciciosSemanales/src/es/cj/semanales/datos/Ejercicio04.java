@@ -24,14 +24,12 @@ public class Ejercicio04 {
 		System.out.println(Arrays.toString(numeros));
 		
 		int pedir;
-		int contador = 0;
-	
-		boolean  finalizar = true;
 		
-		System.out.println("Dame un numero : ( si es 0 finaliza el programa )");
+		System.out.println("Dame un numero positivo : ( si es 0 finaliza el programa )");
 		
 		do {
 			int aux = -1;
+			int contador = 0;
 			pedir = sc.nextInt();
 			
 			if(pedir>0) {
@@ -42,19 +40,16 @@ public class Ejercicio04 {
 						aux = i;
 					}
 				}
-				
 				if(aux > -1)
 					System.out.println("El numero aparece " + contador + ". Y su primera posicion es " + aux);
 				else if(aux == -1){
 					System.out.println("-1");
 				}
-			
-			}else if(pedir == 0) {
-				finalizar = false;
-			}else
-				System.out.println("Dame un numero positivo");
+				
+			}else if(pedir<0)
+				System.out.println("Dame un numero positivo : ( si es 0 finaliza el programa )");
 		
-		}while(finalizar);
+		}while(pedir!=0);
 		
 		
 		
