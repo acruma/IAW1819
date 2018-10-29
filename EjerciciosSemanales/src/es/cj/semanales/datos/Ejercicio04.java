@@ -43,7 +43,7 @@ public class Ejercicio04 {
 				if(aux > -1)
 					System.out.println("El numero aparece " + contador + ". Y su primera posicion es " + aux);
 				else if(aux == -1){
-					System.out.println("-1");
+					System.out.println("El numero aparece " + contador + ". Y su primera posicion es " + aux);
 				}
 				
 			}else if(pedir<0)
