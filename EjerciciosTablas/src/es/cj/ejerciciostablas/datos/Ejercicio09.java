@@ -38,7 +38,8 @@ public class Ejercicio09 {
 	}
 
 	private static void fusion() {
-		// Hay que comparar por cada tabla que numero es mayor o igual para agregarla.
+		
+		
 		
 	}
 	
