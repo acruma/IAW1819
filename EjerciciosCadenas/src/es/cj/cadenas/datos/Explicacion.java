@@ -4,7 +4,7 @@ public class Explicacion {
 
 	public static void main(String[] args) {
 		
-		String cadena1 = "hola";
+		String cadena1 = "holaaa";
 		String cadena2 = new String("HOLA");
 		
 		// Comparaciones
