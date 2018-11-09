@@ -28,14 +28,16 @@ public class Ejercicio01 {
 		
 		auxiliar = cadena.substring(cadena.length()-1);
 		
-//		for (int i = 0; i <= cadena.length()-2; i++) {
-//			if(cadena.substring(i,1).equals(auxiliar)) {
-//				contador++;
-//			}
-//		}
+		System.out.println(auxiliar);
+		
+		for (int i = 0; i < cadena.length(); i++) {
+			if(cadena.substring(i,i+1).equals(auxiliar)) {
+				contador++;
+			}
+		}
 		
 		System.out.println("El último carácter aparece : " + contador);
-		
+			
 		auxiliar = cadena.substring(0, 1);
 		
 		System.out.println("Reemplazo primer carácter a masyusculas : " + cadena.replace(auxiliar, auxiliar.toUpperCase() ));
