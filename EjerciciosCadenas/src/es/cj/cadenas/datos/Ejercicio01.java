@@ -19,9 +19,11 @@ public class Ejercicio01 {
 		
 		System.out.println("Mayúsculas : " + cadena.toUpperCase());
 		System.out.println("Minúsculas : " + cadena.toLowerCase());
+		if(cadena.length() >= 2) {
+			System.out.println("Primeros 2 carácteres : " + cadena.substring(0, 2));
+			System.out.println("Últimos 2 carácteres : " + cadena.substring(cadena.length()-2));
+		}
 		
-		System.out.println("Primeros 2 carácteres : " + cadena.substring(0, 2));
-		System.out.println("Últimos 2 carácteres : " + cadena.substring(cadena.length()-2, cadena.length()));
 		
 		String auxiliar;
 		int contador = 0;
@@ -31,7 +33,7 @@ public class Ejercicio01 {
 		System.out.println(auxiliar);
 		
 		for (int i = 0; i < cadena.length(); i++) {
-			if(cadena.substring(i,i+1).equals(auxiliar)) {
+			if(cadena.substring(i,i+1).equalsIgnoreCase(auxiliar)) {
 				contador++;
 			}
 		}
@@ -40,7 +42,9 @@ public class Ejercicio01 {
 			
 		auxiliar = cadena.substring(0, 1);
 		
-		System.out.println("Reemplazo primer carácter a masyusculas : " + cadena.replace(auxiliar, auxiliar.toUpperCase() ));
+		cadena = cadena.replace(auxiliar.toLowerCase(), auxiliar.toUpperCase());
+		
+		System.out.println("Reemplazo primer carácter a masyusculas : " + cadena);
 		
 		cadena = "***" + cadena;
 				

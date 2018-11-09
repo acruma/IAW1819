@@ -1,5 +1,7 @@
 package es.cj.cadenas.datos;
 
+import java.util.Arrays;
+
 public class Explicacion {
 
 	public static void main(String[] args) {
@@ -42,6 +44,40 @@ public class Explicacion {
 		
 		System.out.println(cadena1.substring(1, cadena1.length()));
 		System.out.println(cadena1.substring(1));
+		
+		char letras [] = cadena1.toCharArray();
+		System.out.println(Arrays.toString(letras));
+		
+		// Eliminar espacios inicial y final
+		String usuario = " mateo ";
+		usuario = usuario.trim();
+		System.out.println(usuario);
+		
+		String frase = "Hola que tal estas";
+		
+		String palabras [] = frase.split(" ");
+		
+		for (int i = 0; i < palabras.length; i++) {
+			System.out.println(palabras[i]);
+		}
+		
+		//////////////////////////////// STRING BUFFERS ///////////////////////////////////////
+		
+		StringBuffer sb = new StringBuffer(cadena1);
+		
+		sb.append("adios");
+		System.out.println(sb.toString());
+		
+		sb.insert(0, "Inicio");
+		System.out.println(sb.toString());
+		
+		sb.deleteCharAt(7);
+		sb.replace(0, 3, "avion");
+		System.out.println(sb.toString());
+		
+		sb.reverse();
+		
+		
 	}
 
 }

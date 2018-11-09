@@ -12,9 +12,11 @@ public class Ejercicio02 {
 	public static void main(String[] args) {
 		
 		System.out.println("Dame una cadena");
-		String cadena = sc.next();
+		String cadena = sc.nextLine();
 		System.out.println("Dame otra cadena");
-		String cadena2 = sc.next();
+		String cadena2 = sc.nextLine();
+		
+		// Opción 1
 		
 		int contador = 0;
 		
@@ -25,6 +27,18 @@ public class Ejercicio02 {
 		}
 		
 		System.out.println(contador);
+		
+		// Opción 2
+		
+		int contador2 = 0;
+		int pos = cadena2.indexOf(cadena);
+		
+		while(pos != -1) {
+			contador2++;
+			pos = cadena2.indexOf(cadena, pos+1);
+		}
+		
+		System.out.println(contador2);
 		
 	}
 
