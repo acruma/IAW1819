@@ -18,9 +18,9 @@ public class Ejercicio02 {
 		
 		int contador = 0;
 		
-		for (int i = 0; i < cadena.length(); i++) {
-			if (cadena2.contains(cadena)) {
-				
+		for (int i = 0; i <= cadena2.length() - cadena.length(); i++) {
+			if(cadena2.substring(i,i+cadena.length()).equals(cadena)) {
+				contador++;
 			}
 		}
 		
